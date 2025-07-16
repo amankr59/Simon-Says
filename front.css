@@ -1,64 +1,113 @@
-body{
+
+* {
     margin: 0;
     padding: 0;
-    font-size: xx-large;
-    background-color:#305f72;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.clr1{
-    height: 20px;
-    width: 20px;
-    background-color: red;
-    padding-right: 2px;
-}
-.clr2{
-    height: 20px;
-    width: 20px;
-    background-color: green;
-}
-.clr3{
-    height: 20px;
-    width: 20px;
-    background-color: yellow;
-}
-.clr4{
-    height: 20px;
-    width: 20px;
-    background-color: purple;
-    margin-left: 4px;
-}
-.component{
-    display: flex;
-    flexbox-direction:column;
-    align-items: center;
-    margin-right: 5px;  
-    justify-content: center;  
-}
-.component div{
-    
-    margin-left: 5px;
-}
-h1{
-    display: flex;
-    justify-content: center;
-}
-.cp li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
-.rule li{
+body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
     display: flex;
-    
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    
-    justify-content:center; 
+    padding: 20px;
 }
-button{
-    margin-left: 47%;
-    font-size: 25px;
-    border-radius: 10px;
+
+/* Heading styles */
+h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-button:hover{
-    background-color: #7593af;
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+/* Game container */
+.mainbox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Button row styles */
+.firstBox,
+.secondBox {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.btn {
+    width: 200px;
+    height: 160px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+    user-select: none;
+}
+
+
+.red {
+    background-color: #ff4d4d;
+    box-shadow: 0 4px #b30000;
+}
+
+.yellow {
+    background-color: #ffd633;
+    box-shadow: 0 4px #b3a100;
+}
+
+.green {
+    background-color: #2ecc71;
+    box-shadow: 0 4px #1f7e4d;
+}
+
+.purple {
+    background-color: #9b59b6;
+    box-shadow: 0 4px #6c3483;
+}
+
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    .mainbox {
+        gap: 15px;
+    }
+
+    .firstBox, .secondBox {
+        gap: 15px;
+    }
 }
